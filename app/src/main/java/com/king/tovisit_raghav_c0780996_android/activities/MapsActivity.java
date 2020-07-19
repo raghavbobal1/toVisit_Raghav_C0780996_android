@@ -1,4 +1,4 @@
-package com.king.tovisit_raghav_c0780996_android;
+package com.king.tovisit_raghav_c0780996_android.activities;
 
 import androidx.fragment.app.FragmentActivity;
 
@@ -10,6 +10,7 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+import com.king.tovisit_raghav_c0780996_android.R;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
