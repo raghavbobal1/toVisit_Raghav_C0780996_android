@@ -1,9 +1,87 @@
 <?xml version="1.0" encoding="utf-8"?>
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.MapsActivity" />
+    android:orientation="vertical"
+    tools:context=".activities.MapsActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/nearByPlaces"
+            android:layout_width="380dp"
+            android:layout_height="35dp"
+            android:entries="@array/nearByPlaces"
+            android:gravity="start|left" />
+
+        <Button
+            android:id="@+id/userLocationBtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+          />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/editModeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/visitedCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:text="Mark As Visited"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/updateBTN"
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:text="Update"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/mapType"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:entries="@array/map_types"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
