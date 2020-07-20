@@ -8,10 +8,10 @@
 
     <ImageView
         android:id="@+id/placeImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="49dp"
+        android:layout_height="46dp"
         android:layout_marginLeft="0dp"
-         />
+        android:src="@drawable/compass" />
 
     <TextView
         android:id="@+id/name_ID"
