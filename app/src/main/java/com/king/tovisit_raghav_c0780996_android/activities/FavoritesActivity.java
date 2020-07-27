@@ -100,7 +100,6 @@ public class FavoritesActivity extends AppCompatActivity {
 
     public void showMap(View view)
     {
-        //Proceed to map to add favorites
         Intent mapIntent = new Intent(this, MapsActivity.class);
         startActivity(mapIntent);
     }
