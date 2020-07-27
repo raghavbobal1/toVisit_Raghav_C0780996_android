@@ -40,7 +40,8 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_weight="1"
-            android:background="@drawable/dir_icon"
+            android:autoText="false"
+            android:background="@drawable/compass"
             android:onClick="onMarkerClick" />
 
         <Button
@@ -49,13 +50,13 @@
             android:layout_height="50dp"
             android:layout_margin="0dp"
             android:layout_marginStart="10dp"
+            android:layout_marginLeft="10dp"
             android:layout_weight="1"
-            android:background="@drawable/save_icon"
+            android:background="@drawable/favourites"
             android:onClick="onMarkerClick"
             android:paddingLeft="10dp"
             android:textColor="#000"
-            android:textStyle="bold"
-            android:layout_marginLeft="10dp" />
+            android:textStyle="bold" />
 
 
     </LinearLayout>

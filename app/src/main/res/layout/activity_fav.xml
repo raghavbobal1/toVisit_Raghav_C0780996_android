@@ -4,21 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.FavActivity">
+    tools:context="com.king.tovisit_raghav_c0780996_android.activities.FavoritesActivity">
 
     <ImageView
         android:id="@+id/showMap"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#D8608A"
+        android:background="#000000"
         android:gravity="center"
         android:onClick="showMap"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@android:drawable/ic_menu_add" />
+        app:srcCompat="@android:drawable/ic_menu_add"
+        android:layout_marginRight="16dp" />
 
     <com.baoyz.swipemenulistview.SwipeMenuListView
         android:id="@+id/locationList"
@@ -31,14 +31,14 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="373dp"
-        android:layout_height="38dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="24dp"
-        android:text="Your Favourite Places-"
+        android:text="YOUR LIST OF FAVORITE PLACES"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#D8608A"
+        android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"

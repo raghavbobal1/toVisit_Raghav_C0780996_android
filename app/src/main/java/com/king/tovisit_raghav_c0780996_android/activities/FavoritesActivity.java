@@ -23,7 +23,7 @@ import com.baoyz.swipemenulistview.SwipeMenuListView;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FavActivity extends AppCompatActivity {
+public class FavoritesActivity extends AppCompatActivity {
 
     MapsDatabase mDatabase;
     SwipeMenuListView listViewPlaces;
@@ -69,7 +69,7 @@ public class FavActivity extends AppCompatActivity {
                         loadPlaces();
                         break;
                     case 1:
-                        Intent editIntent = new Intent(FavActivity.this, MapsActivity.class);
+                        Intent editIntent = new Intent(FavoritesActivity.this, MapsActivity.class);
                         editIntent.putExtra("selectedPlace", placeList.get(position));
                         editIntent.putExtra("EDIT", true);
                         startActivity(editIntent);
@@ -84,7 +84,7 @@ public class FavActivity extends AppCompatActivity {
         listViewPlaces.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent mapI = new Intent(FavActivity.this, MapsActivity.class);
+                Intent mapI = new Intent(FavoritesActivity.this, MapsActivity.class);
                 mapI.putExtra("selectedPlace", placeList.get(position));
                 startActivity(mapI);
             }

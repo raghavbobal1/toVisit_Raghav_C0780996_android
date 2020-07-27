@@ -35,7 +35,6 @@ import android.widget.Toast;
 import com.king.tovisit_raghav_c0780996_android.R;
 import com.king.tovisit_raghav_c0780996_android.databaseHelper.MapsDatabase;
 import com.king.tovisit_raghav_c0780996_android.helperClass.Places;
-import com.king.tovisit_raghav_c0780996_android.networking.fetchURL;
 import com.king.tovisit_raghav_c0780996_android.networking.DataParser;
 import com.king.tovisit_raghav_c0780996_android.networking.GetDirectionsData;
 import com.king.tovisit_raghav_c0780996_android.networking.GetPlacesData;
@@ -59,7 +58,6 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
@@ -136,7 +134,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     if (isFvt) {
                         FocusLocation(new LatLng(mPlace.getLat(), mPlace.getLng()));
                         mMap.addMarker(new MarkerOptions().position(new LatLng(mPlace.getLat(), mPlace.getLng()))
-                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.nearbyPlaces))
+                                .icon(BitmapDescriptorFactory.fromResource(R.drawable.nearbyplaces))
                                 .title(mPlace.getName())).showInfoWindow();
                         userLocationMarker(userLocation);
                     } else {
@@ -325,7 +323,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                     favoritePlace.setTitle(newPlaceName);
                     favoritePlace.showInfoWindow();
                     Toast.makeText(MapsActivity.this, success ? "Updated" : "Update failed", Toast.LENGTH_SHORT).show();
-                    Intent mIntent = new Intent(MapsActivity.this, FavActivity.class);
+                    Intent mIntent = new Intent(MapsActivity.this, FavoritesActivity.class);
                     startActivity(mIntent);
                 }
             });
